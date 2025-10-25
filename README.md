@@ -19,7 +19,7 @@
 **Objetivo:**  
 Desarrollar un programa que implemente operaciones básicas sobre una lista enlazada simple de números enteros positivos.
 
-**Código:** [`P1ManipulaciónListasEnlazadas.java`](./P1ManipulaciónListasEnlazadas.java)
+**Código:** [`P1ManipulaciónListasEnlazadas.java`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/lista1.md)
 
 ---
 
@@ -27,7 +27,7 @@ Desarrollar un programa que implemente operaciones básicas sobre una lista enla
 **Objetivo:**  
 Leer palabras desde un archivo de texto y almacenarlas en una lista enlazada, permitiendo su manipulación dinámica.
 
-**Código:** [`P2PalabrasdesdeArchivo.java`](./P2PalabrasdesdeArchivo.java)
+**Código:** [`P2PalabrasdesdeArchivo.java`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/lista2.md)
 
 ---
 
@@ -35,7 +35,7 @@ Leer palabras desde un archivo de texto y almacenarlas en una lista enlazada, pe
 **Objetivo:**  
 Representar polinomios mediante lista enlazada simple y calcular sus valores para distintos puntos de evaluación.
 
-**Código:** [`P3Polinomios.java`](./P3Polinomios.java)
+**Código:** [`P3Polinomios.java`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/lista3.md)
 
 ---
 
@@ -43,7 +43,7 @@ Representar polinomios mediante lista enlazada simple y calcular sus valores par
 **Objetivo:**  
 Modificar la representación de un polinomio para que sea una lista circular, optimizando el recorrido continuo.
 
-**Código:** [`P4PolinomioCircular.java`](./P4PolinomioCircular.java)
+**Código:** [`P4PolinomioCircular.java`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/lista4.md)
 
 ---
 
@@ -51,6 +51,6 @@ Modificar la representación de un polinomio para que sea una lista circular, op
 **Objetivo:**  
 Construir una lista doblemente enlazada a partir de los caracteres de una cadena ingresada y ordenarlos alfabéticamente.
 
-**Código:** [`P5ListaDobleCaracteres.java`](./P5ListaDobleCaracteres.java)
+**Código:** [`P5ListaDobleCaracteres.java`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/lista5.md)
 
 ---
