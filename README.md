@@ -1,15 +1,27 @@
-# 📚 Ejercicios Prácticos de Listas
+# 📚 Ejercicios Prácticos de Listas y Pilas
+
 ## 👩‍💻 Autora
 **Marisol Rincón Solís**
 
 ---
 
+## 🧩 Descripción General
+Este repositorio contiene una colección de ejercicios prácticos en **Java**, organizados por temas:  
+- **Listas Enlazadas:** simples, dobles y circulares.  
+- **Pilas:** operaciones básicas y aplicaciones.  
+
+Cada ejercicio incluye su **objetivo**, **pseudocódigo** y **enlace al código fuente** correspondiente.
+
+---
+
+# 🧾 Ejercicios Prácticos de Listas
+
 ## 📝 Temas
-- Listas Enlazadas Simples
-- Listas Enlazadas Dobles
-- Listas Circulares
-- Manipulación de Archivos
-- Evaluación de Polinomios
+- Listas Enlazadas Simples  
+- Listas Enlazadas Dobles  
+- Listas Circulares  
+- Manipulación de Archivos  
+- Evaluación de Polinomios  
 
 ---
 
@@ -54,3 +66,74 @@ Construir una lista doblemente enlazada a partir de los caracteres de una cadena
 **Código:** [`P5ListaDobleCaracteres.java`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/lista5.md)
 
 ---
+
+# 🧱 Ejercicios Prácticos de Pilas
+
+## 📝 Temas
+- Concepto de Pila (LIFO)  
+- Operaciones Básicas: Push, Pop, Peek  
+- Aplicaciones Prácticas de Pilas  
+- Evaluación de Expresiones Postfijas  
+- Simulación de Funciones Deshacer (Undo)  
+
+---
+
+## 📂 Actividades
+
+### 1️⃣ Simulación Simple de Pila
+**Objetivo:**  
+Practicar las operaciones básicas `push` y `pop` en una pila.
+
+**Código:** [`Pila1.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila1.md)
+
+---
+
+### 2️⃣ Pila de Nombres
+**Objetivo:**  
+Permitir al usuario ingresar nombres y mostrarlos en orden inverso utilizando una pila.
+
+**Código:** [`Pila2.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila2.md)
+
+---
+
+### 3️⃣ y 4️⃣ Verificar si una Pila Está Vacía / Invertir una Palabra
+**Objetivo:**  
+- **Ejercicio 3:** Comprobar si la pila contiene elementos utilizando el método `isEmpty()`.  
+- **Ejercicio 4:** Invertir una palabra utilizando una pila de caracteres.
+
+**Código:** [`Pila3y4.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila3%20y%204.md)
+
+---
+
+### 5️⃣ y 6️⃣ Balanceo de Paréntesis / Conversión de Decimal a Binario
+**Objetivo:**  
+- **Ejercicio 5:** Verificar si los paréntesis en una expresión están correctamente balanceados.  
+- **Ejercicio 6:** Convertir un número decimal a binario utilizando una pila para almacenar los restos de la división.
+
+**Código:** [`Pila5y6.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila%205%20y%206.md)
+
+---
+
+### 7️⃣ y 8️⃣ Simular Función Deshacer (Undo) / Evaluar Expresión Postfija
+**Objetivo:**  
+- **Ejercicio 7:** Simular la función *Deshacer (Undo)* utilizando una pila para almacenar las acciones realizadas.  
+- **Ejercicio 8:** Evaluar una expresión matemática escrita en notación postfija utilizando una pila de operandos.
+
+**Código:** [`Pila7y8.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila7y8.md)
+
+---
+
+### 9️⃣ y 🔟 Revertir Lista / Verificar Palíndromo
+**Objetivo:**  
+- **Ejercicio 9:** Usar una pila para invertir los elementos de una lista.  
+- **Ejercicio 10:** Determinar si una palabra es palíndroma utilizando una pila.
+
+**Código:** [`Pila9y10.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila%209%20y%2010%20.md)
+
+---
+
+## 🧠 Notas Finales
+Estos ejercicios fueron desarrollados con fines educativos para reforzar la comprensión de **estructuras de datos** en Java, fomentando la lógica de programación y el uso eficiente de **Listas** y **Pilas**.
+
+---
+
