@@ -1,5 +1,16 @@
 # Ejercicio3 
 ## Tema>:Colas
+## Descripción:
+### Simular el flujo de atención durante 7 horas considerando:
+#### • Una fila única de clientes.
+#### • 3 cajas activas, con posibilidad de abrir una cuarta caja si hay más de 20 clientes.
+#### • Tiempos de atención distribuidos uniformemente por caja.
+#### • Llegadas de clientes cada minuto (en promedio).
+#### • Estadísticas a calcular:
+#### o Total de clientes atendidos.
+#### o Tamaño medio y máximo de la fila.
+#### o Tiempo máximo de espera.
+#### o Tiempo de apertura de la cuarta caja.
 
 ```java
 package Cola.EjerciciosPracticos.Ej3;
@@ -78,67 +89,98 @@ public class Cliente {
 ```java
 package Cola.EjerciciosPracticos.Ej3;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 /**
- *Clase que representa una caja en el supermercado
- * @author Marisol Rincón Solís
+ * Clase que representa una caja en el supermercado
+ * @author Marisol Rincón Solis
  */
-public class Caja  {
-    private Cliente atendiendo; // Cliente que está siendo atendido
+public class Caja {
+    private Cliente atendiendo;
     private int id;
+    private int minutosRestantes = 0;
 
-    public Caja(int id) { this.id = id; }
-
-    public boolean estaLibre() { 
-        return atendiendo == null; 
+    public Caja(int id) {
+        this.id = id;
     }
+
+    public boolean estaLibre() {
+        return atendiendo == null;
+    }
+
     public void agregarCliente(Cliente c) {
-        atendiendo = c; 
+        this.atendiendo = c;
     }
+
+    public void setMinutosRestantes(int minutos) {
+        this.minutosRestantes = minutos;
+    }
+
+    /** Decrementa el tiempo restante. Si llega a 0, libera la caja */
+    public void decrementarMinutosRestantes() {
+        if (atendiendo != null) {
+            minutosRestantes--;
+            if (minutosRestantes <= 0) {
+                atender();  // libera
+            }
+        }
+    }
+
     public void atender() {
-        atendiendo = null; 
+        this.atendiendo = null;
+        this.minutosRestantes = 0;
     }
+
     public int getId() {
-        return id; 
+        return id;
     }
-    
 }
+
 
 ```
 
 ```java
 package Cola.EjerciciosPracticos.Ej3;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
- *Simulación de atención al cliente con fila única y hasta 4 cajas
+ * Simulación de atención al cliente con fila única y hasta 4 cajas
  * Genera estadísticas de clientes atendidos, tiempo de espera y apertura de cuarta caja
- * @author Marisol Rincón Solís
+ * @author Marisol Rincón Solis
  */
-public class SimuladorEsperanza  implements Simulador{
- 
+public class SimuladorEsperanza implements Simulador {
     private Queue<Cliente> filaClientes = new LinkedList<>();
     private List<Caja> cajas = new ArrayList<>();
-    private int clientesAtendidos, tiempoMaximoEspera, sumaTiemposEspera, clientesConEspera;
-    private int tamanoMaximoFila;
-    private int tiempoSimulacion, frecuenciaLlegadas, umbralApertura;
+    private int clientesAtendidos = 0;
+    private int tiempoMaximoEspera = 0;
+    private int sumaTiemposEspera = 0;
+    private int clientesConEspera = 0;
+    private int tamanoMaximoFila = 0;
+    private long sumaTamanoFila = 0;  // para promedio de tamaño de fila
+    private int tiempoSimulacion;
+    private int frecuenciaLlegadas;
+    private int umbralApertura;
     private Integer minutoAperturaCuartaCaja = null;
+    private Random random = new Random();
 
-    // Constructor con parámetros de simulación
+    /**
+     * Constructor con parámetros de simulación
+     * @param tiempoSimulacion duración en minutos de la simulación
+     * @param frecuenciaLlegadas cada cuántos minutos llega un cliente
+     * @param umbralApertura si el promedio de clientes por caja > umbral abre cuarta caja
+     */
     public SimuladorEsperanza(int tiempoSimulacion, int frecuenciaLlegadas, int umbralApertura) {
         this.tiempoSimulacion = tiempoSimulacion;
         this.frecuenciaLlegadas = frecuenciaLlegadas;
         this.umbralApertura = umbralApertura;
 
         // Inicializamos con 3 cajas activas
-        for (int i = 1; i <= 3; i++) cajas.add(new Caja(i));
+        for (int i = 1; i <= 3; i++) {
+            cajas.add(new Caja(i));
+        }
     }
 
     @Override
@@ -146,13 +188,15 @@ public class SimuladorEsperanza  implements Simulador{
         System.out.println("=== INICIO SIMULACION ESPERANZA ===");
 
         for (int minuto = 0; minuto < tiempoSimulacion; minuto++) {
-
             // Llegada de clientes cada frecuenciaLlegadas minutos
             if (minuto % frecuenciaLlegadas == 0) {
-                Cliente c = new Cliente(minuto + 1, minuto);
+                Cliente c = new Cliente(clientesAtendidos + filaClientes.size() + 1, minuto);
                 filaClientes.add(c);
-                tamanoMaximoFila = Math.max(tamanoMaximoFila, filaClientes.size());
             }
+
+            // Actualizamos estadísticas de fila
+            tamanoMaximoFila = Math.max(tamanoMaximoFila, filaClientes.size());
+            sumaTamanoFila += filaClientes.size();
 
             // Atención de clientes en cada caja disponible
             for (Caja caja : cajas) {
@@ -167,12 +211,20 @@ public class SimuladorEsperanza  implements Simulador{
 
                     caja.agregarCliente(siguiente);
                     clientesAtendidos++;
+
+                    // Asignar duración de atención aleatoria entre 1 y 4 minutos
+                    int duracionAtencion = 1 + random.nextInt(4);
+                    caja.setMinutosRestantes(duracionAtencion);
+                }
+                // Reducir el tiempo restante de atención si está ocupado
+                if (!caja.estaLibre()) {
+                    caja.decrementarMinutosRestantes();
                 }
             }
 
             // Verificamos si necesitamos abrir la cuarta caja
-            int promedioFila = filaClientes.size() / Math.max(1, cajas.size());
-            if (promedioFila > umbralApertura && cajas.size() == 3) {
+            int promedioActualCaja = filaClientes.size() / Math.max(1, cajas.size());
+            if (promedioActualCaja > umbralApertura && cajas.size() == 3) {
                 cajas.add(new Caja(4));
                 minutoAperturaCuartaCaja = minuto;
                 System.out.println("Se abre cuarta caja en minuto " + minuto);
@@ -184,22 +236,28 @@ public class SimuladorEsperanza  implements Simulador{
 
     @Override
     public void mostrarResultados() {
+        double promedioTamanoFila = (double) sumaTamanoFila / tiempoSimulacion;
+        double promedioEspera = clientesConEspera == 0 ? 0.0 : (double) sumaTiemposEspera / clientesConEspera;
+
         System.out.println("\n=== RESULTADOS SIMULACION ===");
         System.out.println("Clientes atendidos: " + clientesAtendidos);
         System.out.println("Tamaño máximo de fila: " + tamanoMaximoFila);
+        System.out.printf("Tamaño promedio de fila: %.2f%n", promedioTamanoFila);
         System.out.println("Tiempo máximo de espera: " + tiempoMaximoEspera + " min");
-        System.out.printf("Tiempo promedio de espera: %.2f min%n",
-            clientesConEspera == 0 ? 0.0 : (double)sumaTiemposEspera / clientesConEspera);
+        System.out.printf("Tiempo promedio de espera: %.2f min%n", promedioEspera);
         System.out.println("Cajas utilizadas: " + cajas.size());
-        if (minutoAperturaCuartaCaja != null)
+        if (minutoAperturaCuartaCaja != null) {
             System.out.println("Minuto de apertura de cuarta caja: " + minutoAperturaCuartaCaja);
+        }
     }
 
     public static void main(String[] args) {
-        SimuladorEsperanza sim = new SimuladorEsperanza(420, 1, 20); // 7 horas simuladas, llegada cada minuto, apertura > 20
+        SimuladorEsperanza sim = new SimuladorEsperanza(420, 1, 20); // 420 minutos (7 horas), llegada cada 1 minuto, umbral 20
         sim.ejecutar();
-        sim.mostrarResultados();
     }
- 
 }
 ```
+
+## Evidencia 
+<img width="570" height="489" alt="image" src="https://github.com/user-attachments/assets/2eefac0a-e7ee-499a-829b-a929d4736b0c" />
+
