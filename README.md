@@ -131,9 +131,17 @@ Permitir al usuario ingresar nombres y mostrarlos en orden inverso utilizando un
 **Código:** [`Pila9y10.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila%209%20y%2010%20.md)
 
 ---
+# 🧱 Ejercicios Prácticos : Colas
 
-## 🧠 Notas Finales
-Estos ejercicios fueron desarrollados con fines educativos para reforzar la comprensión de **estructuras de datos** en Java, fomentando la lógica de programación y el uso eficiente de **Listas** y **Pilas**.
+## 1️⃣ Ejercicio 1: Comparación de Colas  
+**Objetivo:** Comparar dos colas para verificar si tienen los mismos elementos en el mismo orden.  
+[Enlace al código](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/ColasEjercicio%20%3A%20Comparaci%C3%B3n%20de%20colas.md)
 
----
+## 2️⃣ Ejercicio 2: Simulación de Supermercado con Carritos y Cajas  
+**Objetivo:** Simular un supermercado con carritos disponibles, múltiples cajas, asignación de clientes a la caja con menos cola y atención secuencial.  
+[Enlace al código](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Ej2_Colas%3ASimulaci%C3%B3nsSupermercado.md)
+
+## 3️⃣ Ejercicio 3: Simulación de Atención al Cliente en Supermercado – Esperanza  
+**Objetivo:** Simular el flujo de atención durante 7 horas usando una sola fila de clientes, 3 cajas activas y apertura de una cuarta si la fila supera 20 clientes, con cálculo de estadísticas de espera y tamaño de fila.  
+[Enlace al código](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Ej3_Colassupermercado%20Esperanza.md)
 
