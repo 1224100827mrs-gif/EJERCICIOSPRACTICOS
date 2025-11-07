@@ -31,7 +31,7 @@ Cada ejercicio incluye su **objetivo**, **pseudocódigo** y **enlace al código 
 **Objetivo:**  
 Desarrollar un programa que implemente operaciones básicas sobre una lista enlazada simple de números enteros positivos.
 
-**Código:** [`P1ManipulaciónListasEnlazadas.java`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/lista1.md)
+**Código:** [`P1ManipulaciónListasEnlazadas.java`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/lista1(ManipulacionListaEnlazada).md)
 
 ---
 
@@ -39,7 +39,7 @@ Desarrollar un programa que implemente operaciones básicas sobre una lista enla
 **Objetivo:**  
 Leer palabras desde un archivo de texto y almacenarlas en una lista enlazada, permitiendo su manipulación dinámica.
 
-**Código:** [`P2PalabrasdesdeArchivo.java`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/lista2.md)
+**Código:** [`P2PalabrasdesdeArchivo.java`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/lista2(PalabrasdesdeArchivo).md)
 
 ---
 
@@ -47,7 +47,7 @@ Leer palabras desde un archivo de texto y almacenarlas en una lista enlazada, pe
 **Objetivo:**  
 Representar polinomios mediante lista enlazada simple y calcular sus valores para distintos puntos de evaluación.
 
-**Código:** [`P3Polinomios.java`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/lista3.md)
+**Código:** [`P3Polinomios.java`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/lista3(PolinomiosListaEnlazada).md)
 
 ---
 
@@ -55,7 +55,7 @@ Representar polinomios mediante lista enlazada simple y calcular sus valores par
 **Objetivo:**  
 Modificar la representación de un polinomio para que sea una lista circular, optimizando el recorrido continuo.
 
-**Código:** [`P4PolinomioCircular.java`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/lista4.md)
+**Código:** [`P4PolinomioCircular.java`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/lista4(PolinomioListaEnlazadaCircular).md)
 
 ---
 
@@ -63,7 +63,7 @@ Modificar la representación de un polinomio para que sea una lista circular, op
 **Objetivo:**  
 Construir una lista doblemente enlazada a partir de los caracteres de una cadena ingresada y ordenarlos alfabéticamente.
 
-**Código:** [`P5ListaDobleCaracteres.java`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/lista5.md)
+**Código:** [`P5ListaDobleCaracteres.java`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/lista5(ListaDoblementeEnlazadaCaracteres).md)
 
 ---
 
@@ -84,7 +84,7 @@ Construir una lista doblemente enlazada a partir de los caracteres de una cadena
 **Objetivo:**  
 Practicar las operaciones básicas `push` y `pop` en una pila.
 
-**Código:** [`Pila1.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila1.md)
+**Código:** [`Pila1.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/PilaEj1(OperacionesBasicas).md)
 
 ---
 
@@ -92,7 +92,7 @@ Practicar las operaciones básicas `push` y `pop` en una pila.
 **Objetivo:**  
 Permitir al usuario ingresar nombres y mostrarlos en orden inverso utilizando una pila.
 
-**Código:** [`Pila2.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila2.md)
+**Código:** [`Pila2.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/PilaEj2(PiladeNombres).md)
 
 ---
 
@@ -101,7 +101,7 @@ Permitir al usuario ingresar nombres y mostrarlos en orden inverso utilizando un
 - **Ejercicio 3:** Comprobar si la pila contiene elementos utilizando el método `isEmpty()`.  
 - **Ejercicio 4:** Invertir una palabra utilizando una pila de caracteres.
 
-**Código:** [`Pila3y4.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila3%20y%204.md)
+**Código:** [`Pila3y4.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila3(VerificarPilaVacia%264(InvertirPalabra).md)
 
 ---
 
@@ -110,7 +110,7 @@ Permitir al usuario ingresar nombres y mostrarlos en orden inverso utilizando un
 - **Ejercicio 5:** Verificar si los paréntesis en una expresión están correctamente balanceados.  
 - **Ejercicio 6:** Convertir un número decimal a binario utilizando una pila para almacenar los restos de la división.
 
-**Código:** [`Pila5y6.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila%205%20y%206.md)
+**Código:** [`Pila5y6.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pilas-Ej5%266(BalaceoParentesis-DecimalBinario).md)
 
 ---
 
@@ -119,7 +119,7 @@ Permitir al usuario ingresar nombres y mostrarlos en orden inverso utilizando un
 - **Ejercicio 7:** Simular la función *Deshacer (Undo)* utilizando una pila para almacenar las acciones realizadas.  
 - **Ejercicio 8:** Evaluar una expresión matemática escrita en notación postfija utilizando una pila de operandos.
 
-**Código:** [`Pila7y8.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila7y8.md)
+**Código:** [`Pila7y8.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila7y8(FuncionUNDO%26ExpresionPostfija)%20.md)
 
 ---
 
@@ -128,7 +128,7 @@ Permitir al usuario ingresar nombres y mostrarlos en orden inverso utilizando un
 - **Ejercicio 9:** Usar una pila para invertir los elementos de una lista.  
 - **Ejercicio 10:** Determinar si una palabra es palíndroma utilizando una pila.
 
-**Código:** [`Pila9y10.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila%209%20y%2010%20.md)
+**Código:** [`Pila9y10.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila9y10(RevertirLista%26Palindromo)%20.md)
 
 ---
 # 🧱 Ejercicios Prácticos : Colas
