@@ -101,8 +101,8 @@ Permitir al usuario ingresar nombres y mostrarlos en orden inverso utilizando un
 - **Ejercicio 3:** Comprobar si la pila contiene elementos utilizando el método `isEmpty()`.  
 - **Ejercicio 4:** Invertir una palabra utilizando una pila de caracteres.
 
-**Código:** [`Pila3y4.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila3(VerificarPilaVacia%264(InvertirPalabra).md)
-
+**Código:** [`Pila3y4.md`](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila3(VerificarPilaVacia&4(InvertirPalabra).md)
+https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/Pila3(VerificarPilaVacia%264(InvertirPalabra).md
 ---
 
 ### 5️⃣ y 6️⃣ Balanceo de Paréntesis / Conversión de Decimal a Binario
