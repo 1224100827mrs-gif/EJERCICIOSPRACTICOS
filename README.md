@@ -1,4 +1,4 @@
-# 📚 Ejercicios Prácticos de Listas y Pilas
+# 📚 Ejercicios Prácticos de Listas, Pilas y Colas
 
 ## 👩‍💻 Autora
 **Marisol Rincón Solís**
