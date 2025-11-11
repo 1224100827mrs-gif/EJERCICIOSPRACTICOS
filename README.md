@@ -135,7 +135,7 @@ Permitir al usuario ingresar nombres y mostrarlos en orden inverso utilizando un
 
 ## 1️⃣ Ejercicio 1: Comparación de Colas  
 **Objetivo:** Comparar dos colas para verificar si tienen los mismos elementos en el mismo orden.  
-[Enlace al código](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/ColasEjercicio%20%3A%20Comparaci%C3%B3n%20de%20colas.md)
+[Enlace al código](https://github.com/1224100827mrs-gif/EJERCICIOSPRACTICOS/blob/main/ColasEjercicioComparaci%C3%B3ndecolas.md)
 
 ## 2️⃣ Ejercicio 2: Simulación de Supermercado con Carritos y Cajas  
 **Objetivo:** Simular un supermercado con carritos disponibles, múltiples cajas, asignación de clientes a la caja con menos cola y atención secuencial.  
